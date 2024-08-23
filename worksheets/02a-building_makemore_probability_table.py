@@ -249,7 +249,7 @@ def test_calculate_loss():
     # if (all_zeroes := calculate_loss(lambda _ : 0.0, bigrams)) != (expected_all_zeroes := math.inf):
     #    print(f"Using a probability_func that always returns 0.0 resulted in {all_zeroes}, expected {expected_all_zeroes} ")
     #    return
-    expect_close("calculate_loss for bigram_probability", calculate_loss(bigram_probability, bigrams), 3.0881)
+    expect_close("calculate_loss for bigram_probability", calculate_loss(calculate_loss, bigrams), 3.0881)
     print("calculate_loss looks good. Onwards!")
 test_calculate_loss()
 
